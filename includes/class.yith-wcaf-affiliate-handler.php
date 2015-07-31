@@ -1004,8 +1004,8 @@ if ( ! class_exists( 'YITH_WCAF_Affiliate_Handler' ) ) {
 
 			$res = $wpdb->get_results( "SELECT ya.enabled, COUNT( ya.enabled ) AS status_count FROM {$wpdb->yith_affiliates} AS ya GROUP BY enabled", ARRAY_A );
 
-			$statuses = array_column( $res, 'enabled' );
-			$counts = array_column( $res, 'status_count' );
+			$statuses = yith_wcaf_array_column( $res, 'enabled' );
+			$counts = yith_wcaf_array_column( $res, 'status_count' );
 
 			if( $status == 'all' ){
 				return array_sum( $counts );

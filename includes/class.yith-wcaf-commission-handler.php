@@ -1494,8 +1494,8 @@ if ( ! class_exists( 'YITH_WCAF_Commission_Handler' ) ) {
 
 			$res = $wpdb->get_results( "SELECT yc.status, COUNT( yc.status ) AS status_count FROM {$wpdb->yith_commissions} AS yc GROUP BY status", ARRAY_A );
 
-			$statuses = array_column( $res, 'status' );
-			$counts = array_column( $res, 'status_count' );
+			$statuses = yith_wcaf_array_column( $res, 'status' );
+			$counts = yith_wcaf_array_column( $res, 'status_count' );
 
 			if( $status == 'all' ){
 				return array_sum( $counts );

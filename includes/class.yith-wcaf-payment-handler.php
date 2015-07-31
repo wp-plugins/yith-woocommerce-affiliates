@@ -780,8 +780,8 @@ if ( ! class_exists( 'YITH_WCAF_Payment_Handler' ) ) {
 
 			$res = $wpdb->get_results( "SELECT yp.status, COUNT( yp.status ) AS status_count FROM {$wpdb->yith_payments} AS yp GROUP BY status", ARRAY_A );
 
-			$statuses = array_column( $res, 'status' );
-			$counts = array_column( $res, 'status_count' );
+			$statuses = yith_wcaf_array_column( $res, 'status' );
+			$counts = yith_wcaf_array_column( $res, 'status_count' );
 
 			if( $status == 'all' ){
 				return array_sum( $counts );
