@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Affiliates\n"
-"POT-Creation-Date: 2015-07-29 09:41+0100\n"
+"POT-Creation-Date: 2015-08-03 10:09+0100\n"
 "PO-Revision-Date: 2015-07-21 14:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
@@ -38,7 +38,7 @@ msgstr ""
 #: includes/admin-tables/class.yith-wcaf-product-stat-table.php:150
 #: includes/admin-tables/class.yith-wcaf-product-stat-table.php:164
 #: includes/admin-tables/class.yith-wcaf-product-stat-table.php:178
-#: includes/class.yith-wcaf-admin.php:411
+#: includes/class.yith-wcaf-admin.php:427
 #: templates/shortcodes/dashboard-clicks.php:70
 #: templates/shortcodes/dashboard-clicks.php:71
 #: templates/shortcodes/dashboard-summary.php:75
@@ -376,8 +376,8 @@ msgid "Conv. time"
 msgstr ""
 
 #: includes/class.yith-wcaf-admin.php:73
-#: includes/class.yith-wcaf-admin.php:125
-#: includes/class.yith-wcaf-admin.php:126
+#: includes/class.yith-wcaf-admin.php:127
+#: includes/class.yith-wcaf-admin.php:128
 #: includes/class.yith-wcaf-affiliate-handler.php:1054
 #: templates/admin/affiliate-panel.php:40
 msgid "Affiliates"
@@ -396,70 +396,66 @@ msgid "Stats"
 msgstr ""
 
 #: includes/class.yith-wcaf-admin.php:76
-#: includes/class.yith-wcaf-admin.php:344 includes/class.yith-wcaf.php:77
+#: includes/class.yith-wcaf-admin.php:356 includes/class.yith-wcaf.php:77
 #: templates/shortcodes/dashboard-summary.php:95
 msgid "Settings"
 msgstr ""
 
-#: includes/class.yith-wcaf-admin.php:104
-#: includes/class.yith-wcaf-admin.php:155
+#: includes/class.yith-wcaf-admin.php:106
+#: includes/class.yith-wcaf-admin.php:157
 msgid "YIT Plugins"
 msgstr ""
 
-#: includes/class.yith-wcaf-admin.php:164
+#: includes/class.yith-wcaf-admin.php:166
 msgid "No items found."
 msgstr ""
 
-#: includes/class.yith-wcaf-admin.php:244
+#: includes/class.yith-wcaf-admin.php:246
 msgid "Status changed correctly"
 msgstr ""
 
-#: includes/class.yith-wcaf-admin.php:247
+#: includes/class.yith-wcaf-admin.php:249
 msgid "An error occurred with status changing"
 msgstr ""
 
-#: includes/class.yith-wcaf-admin.php:253
+#: includes/class.yith-wcaf-admin.php:255
 #, php-format
 msgid "An error occurred during payment processing: %s"
 msgstr ""
 
-#: includes/class.yith-wcaf-admin.php:258
+#: includes/class.yith-wcaf-admin.php:260
 #, php-format
 msgid "Commissions %s correctly paid"
 msgstr ""
 
-#: includes/class.yith-wcaf-admin.php:263
+#: includes/class.yith-wcaf-admin.php:265
 #, php-format
 msgid "Commissions %s could not be paid"
 msgstr ""
 
-#: includes/class.yith-wcaf-admin.php:273
+#: includes/class.yith-wcaf-admin.php:275
 #, php-format
 msgid "There was an error while processing payment %s: %s"
 msgid_plural "There was an error while processing payments %s: %s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/class.yith-wcaf-admin.php:283
+#: includes/class.yith-wcaf-admin.php:285
 #, php-format
 msgid "Payment %s completed successfully"
 msgid_plural "Payments %s completed successfully"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/class.yith-wcaf-admin.php:362
-msgid "Plugin Documentation"
-msgstr ""
-
-#: includes/class.yith-wcaf-admin.php:377
+#: includes/class.yith-wcaf-admin.php:393
 msgid "Global stats"
 msgstr ""
 
-#: includes/class.yith-wcaf-admin.php:396
+#: includes/class.yith-wcaf-admin.php:412
 msgid "Ever"
 msgstr ""
 
-#: includes/class.yith-wcaf-admin.php:396
+#: includes/class.yith-wcaf-admin.php:412
 msgid "Today"
 msgstr ""
 
@@ -652,11 +648,11 @@ msgid "Searching&hellip;"
 msgstr ""
 
 #: includes/class.yith-wcaf.php:176
-msgid "Once Weekly"
+msgid "Once a week"
 msgstr ""
 
 #: includes/class.yith-wcaf.php:180
-msgid "Once Monthly"
+msgid "Once a month"
 msgstr ""
 
 #: includes/class.yith-wcaf.php:357

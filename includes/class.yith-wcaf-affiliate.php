@@ -381,7 +381,7 @@ if ( ! class_exists( 'YITH_WCAF_Affiliate' ) ) {
 		 * Returns single instance of the class
 		 *
 		 * @return \YITH_WCAF_Affiliate
-		 * @since 1.0.0
+		 * @since 1.0.2
 		 */
 		public static function get_instance( $token = null ){
 
@@ -390,13 +390,20 @@ if ( ! class_exists( 'YITH_WCAF_Affiliate' ) ) {
 			 * Otherwise, if class loads automatically token from REQUEST, instance will be stored under 0 index
 			 */
 
-			$self = __CLASS__ . ( class_exists( __CLASS__ . '_Premium' ) ? '_Premium' : '' );
+			if( class_exists( 'YITH_WCAF_Affiliate_Premium' ) ) {
+				if ( ! isset( YITH_WCAF_Affiliate_Premium::$instances[ $token ] ) || is_null( YITH_WCAF_Affiliate_Premium::$instances[ $token ] ) ) {
+					YITH_WCAF_Affiliate_Premium::$instances[ $token ] = new YITH_WCAF_Affiliate_Premium;
+				}
 
-			if( ! isset( $self::$instances[ $token ] ) || is_null( $self::$instances[ $token ] ) ){
-				$self::$instances[ $token ] = new $self;
+				return YITH_WCAF_Affiliate_Premium::$instances[ $token ];
 			}
+			else{
+				if ( ! isset( YITH_WCAF_Affiliate::$instances[ $token ] ) || is_null( YITH_WCAF_Affiliate::$instances[ $token ] ) ) {
+					YITH_WCAF_Affiliate::$instances[ $token ] = new YITH_WCAF_Affiliate;
+				}
 
-			return $self::$instances[ $token ];
+				return YITH_WCAF_Affiliate::$instances[ $token ];
+			}
 		}
 	}
 }

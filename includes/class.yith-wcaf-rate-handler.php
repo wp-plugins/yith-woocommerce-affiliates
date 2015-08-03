@@ -100,16 +100,23 @@ if ( ! class_exists( 'YITH_WCAF_Rate_Handler' ) ) {
 		 * Returns single instance of the class
 		 *
 		 * @return \YITH_WCAF_Rate_Handler
-		 * @since 1.0.0
+		 * @since 1.0.2
 		 */
 		public static function get_instance(){
-			$self = __CLASS__ . ( class_exists( __CLASS__ . '_Premium' ) ? '_Premium' : '' );
+			if( class_exists( 'YITH_WCAF_Rate_Handler_Premium' ) ) {
+				if ( is_null( YITH_WCAF_Rate_Handler_Premium::$instance ) ) {
+					YITH_WCAF_Rate_Handler_Premium::$instance = new YITH_WCAF_Rate_Handler_Premium;
+				}
 
-			if( is_null( $self::$instance ) ){
-				$self::$instance = new $self;
+				return YITH_WCAF_Rate_Handler_Premium::$instance;
 			}
+			else{
+				if ( is_null( YITH_WCAF_Rate_Handler::$instance ) ) {
+					YITH_WCAF_Rate_Handler::$instance = new YITH_WCAF_Rate_Handler;
+				}
 
-			return $self::$instance;
+				return YITH_WCAF_Rate_Handler::$instance;
+			}
 		}
 	}
 }
