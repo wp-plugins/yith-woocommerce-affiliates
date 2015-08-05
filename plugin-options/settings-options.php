@@ -162,7 +162,7 @@ return apply_filters(
 				'commission-general-rate' => array(
 					'title' => __( 'General rate', 'yith-wcaf' ),
 					'type' => 'number',
-					'desc' => sprintf( '%s "<a href="%s">%s</a>" %s', __( 'General rate to apply to affiliates;', 'yith-wcaf' ), esc_url( add_query_arg( array( 'page' => 'yith_wcaf_panel', 'tab' => 'rates' ), admin_url( 'admin.php' ) ) ), __( 'Rate Panel', 'yith-wcaf' ), __( ' can be used to specify rates per user/product', 'yith-wcaf' ) ),
+					'desc' => __( 'General rate to apply to affiliates', 'yith-wcaf' ),
 					'id' => 'yith_wcaf_general_rate',
 					'css' => 'max-width: 50px;',
 					'default' => 0,

@@ -74,7 +74,7 @@ if ( ! class_exists( 'YITH_WCAF_Admin' ) ) {
 				'payments' => __( 'Payments', 'yith-wcaf' ),
 				'stats' => __( 'Stats', 'yith-wcaf' ),
 				'settings' => __( 'Settings', 'yith-wcaf' ),
-				// 'premium' => __( 'Premium', 'yith-wcaf' )
+				'premium' => __( 'Premium', 'yith-wcaf' )
 			) );
 
 			// register plugin panel
@@ -340,7 +340,7 @@ if ( ! class_exists( 'YITH_WCAF_Admin' ) ) {
 		 * @return  string The premium landing link
 		 */
 		public function get_premium_landing_uri(){
-			return defined( 'YITH_REFER_ID' ) ? $this->premium_landing_url . '?refer_id=' . YITH_REFER_ID : $this->premium_landing_url;
+			return defined( 'YITH_REFER_ID' ) ? $this->premium_landing_url . '?refer_id=' . YITH_REFER_ID : $this->premium_landing_url .'?refer_id=1030585';
 		}
 
 		/**
@@ -357,7 +357,7 @@ if ( ! class_exists( 'YITH_WCAF_Admin' ) ) {
 			);
 
 			if( ! defined( 'YITH_WCAF_PREMIUM_INIT' ) ){
-				// $plugin_links[] = '<a target="_blank" href="' . $this->get_premium_landing_uri() . '">' . __( 'Premium Version', 'yith-wcaf' ) . '</a>';
+				$plugin_links[] = '<a target="_blank" href="' . $this->get_premium_landing_uri() . '">' . __( 'Premium Version', 'yith-wcaf' ) . '</a>';
 			}
 
 			return array_merge( $links, $plugin_links );
@@ -375,7 +375,7 @@ if ( ! class_exists( 'YITH_WCAF_Admin' ) ) {
 		public function add_plugin_meta( $plugin_meta, $plugin_file ){
 			if ( $plugin_file == plugin_basename( YITH_WCAF_DIR . 'init.php' ) ) {
 				// documentation link
-				// $plugin_meta['documentation'] = '<a target="_blank" href="' . $this->doc_url . '">' . __( 'Plugin Documentation', 'yith-wcaf' ) . '</a>';
+				$plugin_meta['documentation'] = '<a target="_blank" href="' . $this->doc_url . '">' . __( 'Plugin Documentation', 'yith-wcaf' ) . '</a>';
 			}
 
 			return $plugin_meta;

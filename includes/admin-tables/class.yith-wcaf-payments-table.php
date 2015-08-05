@@ -129,7 +129,7 @@ if ( ! class_exists( 'YITH_WCAF_Payments_Table' ) ) {
 				$username .= esc_html( ucfirst( $user_data->display_name ) );
 			}
 
-			$column .= sprintf( '%s<a href="%s">%s</a><small class="meta email"><a href="mailto:%s">%s</a></small>', get_avatar( $user_id, 32 ), add_query_arg( '_affiliate_id', $user_id ), $username, $user_email, $user_email );
+			$column .= sprintf( '%s<a href="%s">%s</a><small class="meta email"><a href="mailto:%s">%s</a></small>', get_avatar( $user_id, 32 ), add_query_arg( '_affiliate_id', $item['affiliate_id'] ), $username, $user_email, $user_email );
 
 			return $column;
 		}
@@ -289,14 +289,20 @@ if ( ! class_exists( 'YITH_WCAF_Payments_Table' ) ) {
 
 			$need_reset = false;
 
-			$user_id = isset( $_REQUEST['_affiliate_id'] ) ? $_REQUEST['_affiliate_id'] : false;
+			$affiliate_id = isset( $_REQUEST['_affiliate_id'] ) ? $_REQUEST['_affiliate_id'] : false;
 			$selected_user = '';
+			$user_id = false;
 
-			if( ! empty( $user_id ) ){
-				$user = get_userdata( $user_id );
+			if( ! empty( $affiliate_id ) ){
+				$affiliate = YITH_WCAF_Affiliate_Handler()->get_affiliate_by_id( $affiliate_id );
 
-				if( ! is_wp_error( $user ) ){
-					$selected_user = $user->user_login . ' (#' . $user_id . ' &ndash; ' . $user->user_email . ')';
+				if( ! empty( $affiliate ) ){
+					$user_id = $affiliate['user_id'];
+					$user = get_userdata( $user_id );
+
+					if( ! is_wp_error( $user ) ){
+						$selected_user = $user->user_login . ' (#' . $user_id . ' &ndash; ' . $user->user_email . ')';
+					}
 				}
 			}
 

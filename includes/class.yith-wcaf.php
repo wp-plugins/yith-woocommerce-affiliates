@@ -33,7 +33,7 @@ if ( ! class_exists( 'YITH_WCAF' ) ) {
 		 * @const string
 		 * @since 1.0.0
 		 */
-		const YITH_WCAF_VERSION = '1.0.2';
+		const YITH_WCAF_VERSION = '1.0.3';
 
 		/**
 		 * Plugin DB version

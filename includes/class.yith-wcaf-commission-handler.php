@@ -1627,6 +1627,40 @@ if ( ! class_exists( 'YITH_WCAF_Commission_Handler' ) ) {
 						}
 						break;
 					default:
+						// handles payment actions
+						$matches = array();
+
+						if( $current_action == 'pay' || preg_match( '^pay_via_([a-zA-Z_-]*)$^', $current_action, $matches ) ){
+							$gateway = isset( $matches[1] ) ? $matches[1] : false;
+							$proceed_with_payment = $gateway ? true : false;
+							$to_pay = array();
+							$cannot_be_paid = array();
+
+							// filters non pending commissions
+							foreach( $_REQUEST[ 'commissions' ] as $commission_id ){
+								$available_status_change = YITH_WCAF_Commission_Handler()->get_available_status_change( $commission_id );
+								if( in_array( 'pending-payment', $available_status_change ) ){
+									$this->change_commission_status( $commission_id, 'pending-payment', __( 'Payment registered; awaiting for IPN confirmation', 'yith-wcaf' ) );
+									$to_pay[] = $commission_id;
+								}
+								else{
+									$cannot_be_paid[] = $commission_id;
+								}
+							}
+
+							// pay filtered commissions
+							$res = YITH_WCAF_Payment_Handler()->register_payment( $to_pay, $proceed_with_payment, $gateway );
+
+							if( ! $res['status'] ){
+								$errors = is_array( $res['messages'] ) ? implode( ',', $res['messages'] ) : $res['messages'];
+								$redirect = esc_url_raw( add_query_arg( array( 'commission_payment_failed' => urlencode( $errors ) ), $redirect ) );
+							}
+							else{
+								$redirect = esc_url_raw( add_query_arg( array( 'commission_paid' => implode( ',', $to_pay ), 'commission_unpaid' => implode( ',', $cannot_be_paid ) ), $redirect ) );
+							}
+
+						}
+
 						break;
 				}
 

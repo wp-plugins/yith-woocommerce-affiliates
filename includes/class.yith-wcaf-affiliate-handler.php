@@ -169,11 +169,11 @@ if ( ! class_exists( 'YITH_WCAF_Affiliate_Handler' ) ) {
 		 * @since 1.0.0
 		 */
 		public function add_affiliate() {
-			if( ! isset( $_POST['yith_new_affiliate'] ) ) {
+			if( ! isset( $_REQUEST['yith_new_affiliate'] ) ) {
 				return;
 			}
 
-			$user_id = isset( $_POST['yith_new_affiliate'] ) ? intval( $_POST['yith_new_affiliate'] ) : 0;
+			$user_id = isset( $_REQUEST['yith_new_affiliate'] ) ? intval( $_REQUEST['yith_new_affiliate'] ) : 0;
 
 			if( empty( $user_id ) ){
 				return;
@@ -313,7 +313,7 @@ if ( ! class_exists( 'YITH_WCAF_Affiliate_Handler' ) ) {
 			if( 'any' == $enabled_form && in_array( 'woocommerce_register_form_start', $wp_current_filter ) && 'yes' == $show_surname_field ):
 				?>
 				<p class="form-row form-row-wide">
-					<label for="last_name"><?php _e( 'First name', 'yith-wcaf' ); ?></label>
+					<label for="last_name"><?php _e( 'Last name', 'yith-wcaf' ); ?></label>
 					<input type="text" class="input-text" name="last_name" id="last_name" value="<?php if ( ! empty( $_POST['last_name'] ) ) echo esc_attr( $_POST['last_name'] ); ?>" />
 				</p>
 			<?php
