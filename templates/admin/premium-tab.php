@@ -289,7 +289,7 @@ if ( ! defined( 'YITH_WCAF' ) ) {
                     <h2><?php _e('Automatic payment','yith-wcaf');?></h2>
                 </div>
                 <p>
-                    <?php echo sprintf(__('It’s time to automate payment system for commissions in your store: the more the traffic in your shop, the more the commissions to pay to your affiliates. You might not find always the time to do that and you might, then, risk to be late with payments and not respect deadlines. ', 'yith-wcaf'), '<b>', '</b>');?>
+                    <?php echo sprintf(__('It\'s time to automate payment system for commissions in your store: the more the traffic in your shop, the more the commissions to pay to your affiliates. You might not find always the time to do that and you might, then, risk to be late with payments and not respect deadlines. ', 'yith-wcaf'), '<b>', '</b>');?>
                 </p>
                 <p>
                     <?php echo sprintf(__('Choose either to pay your affiliates each time a %1$snew commission%2$s is due to them, or to pay the balance on one %1$sspecific day%2$s of the month or to send the amount owed only when a specific commission amount %1$sthreshold%2$s is reached.', 'yith-wcaf'), '<b>', '</b>');?>
@@ -378,7 +378,7 @@ if ( ! defined( 'YITH_WCAF' ) ) {
                     <h2><?php _e('Automatic approval of new affiliates','yith-wcaf');?></h2>
                 </div>
                 <p>
-                    <?php echo sprintf( __('If you do not want to waste your time approving all users who apply for becoming affilitates in your shop, do not worry, with the premium version you will just have enable an option and it’s done: %1$sany new affiliate%2$s will be immediately ready to advertise your products!','yith-wcaf'),'<b>','</b>'); ?>
+                    <?php echo sprintf( __('If you do not want to waste your time approving all users who apply for becoming affilitates in your shop, do not worry, with the premium version you will just have enable an option and it\'s done: %1$sany new affiliate%2$s will be immediately ready to advertise your products!','yith-wcaf'),'<b>','</b>'); ?>
                 </p>
             </div>
         </div>

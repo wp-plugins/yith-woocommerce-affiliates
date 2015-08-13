@@ -3,7 +3,7 @@
  * Plugin Name: YITH WooCommerce Affiliates
  * Plugin URI: http://yithemes.com/
  * Description: YITH WooCommerce Affiliates allows you to manage affiliates, commissions and payments
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: yithemes
  * Author URI: http://yithemes.com/
  * Text Domain: yith-wcaf

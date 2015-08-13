@@ -27,11 +27,11 @@ if ( ! defined( 'YITH_WCAF' ) ) {
 
 	<?php if( $affiliate_id ): ?>
 		<p>
-			<?php echo sprintf( __( 'Your affiliate ID is: <strong>%s</strong>' ), $affiliate_token ) ?>
+			<?php echo sprintf( __( 'Your affiliate ID is: <strong>%s</strong>', 'yith-wcaf' ), $affiliate_token ) ?>
 		</p>
 
 		<p>
-			<?php echo sprintf( __( 'Your referral URL is: <strong>%s</strong>' ), $referral_link ) ?>
+			<?php echo sprintf( __( 'Your referral URL is: <strong>%s</strong>', 'yith-wcaf' ), $referral_link ) ?>
 		</p>
 	<?php endif; ?>
 
@@ -55,7 +55,7 @@ if ( ! defined( 'YITH_WCAF' ) ) {
 		<p class="form form-row">
 			<label for="generated_url"><?php _e( 'Referral URL', 'yith-wcaf' ) ?></label>
 			<input disabled="disabled" type="url" name="generated_url" id="generated_url" value="<?php echo $generated_url ?>" />
-			<?php echo ( ! empty( $generated_url ) ) ? sprintf( '<small>%s</small>', __( '( Now copy this referral link and share it anywhere )' ), 'yith-wcaf' ) : '' ?>
+			<?php echo ( ! empty( $generated_url ) ) ? sprintf( '<small>%s</small>', __( '(Now copy this referral link and share it anywhere)', 'yith-wcaf' ) ) : '' ?>
 		</p>
 
 		<input type="submit" value="<?php _e( 'Generate','yith-wcaf' ) ?>" />

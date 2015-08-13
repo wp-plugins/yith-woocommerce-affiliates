@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Affiliates\n"
-"POT-Creation-Date: 2015-08-03 10:09+0100\n"
+"POT-Creation-Date: 2015-08-13 10:37+0100\n"
 "PO-Revision-Date: 2015-07-21 14:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
@@ -256,7 +256,7 @@ msgid "Select a user"
 msgstr ""
 
 #: includes/admin-tables/class.yith-wcaf-commissions-table.php:462
-#: includes/admin-tables/class.yith-wcaf-payments-table.php:312
+#: includes/admin-tables/class.yith-wcaf-payments-table.php:318
 #: templates/admin/stat-panel-general.php:28
 #: templates/shortcodes/dashboard-clicks.php:31
 #: templates/shortcodes/dashboard-commissions.php:32
@@ -265,7 +265,7 @@ msgid "From:"
 msgstr ""
 
 #: includes/admin-tables/class.yith-wcaf-commissions-table.php:463
-#: includes/admin-tables/class.yith-wcaf-payments-table.php:313
+#: includes/admin-tables/class.yith-wcaf-payments-table.php:319
 #: templates/admin/stat-panel-general.php:29
 #: templates/shortcodes/dashboard-clicks.php:32
 #: templates/shortcodes/dashboard-commissions.php:33
@@ -274,7 +274,7 @@ msgid "To:"
 msgstr ""
 
 #: includes/admin-tables/class.yith-wcaf-commissions-table.php:465
-#: includes/admin-tables/class.yith-wcaf-payments-table.php:315
+#: includes/admin-tables/class.yith-wcaf-payments-table.php:321
 #: templates/admin/stat-panel-general.php:30
 #: templates/shortcodes/dashboard-clicks.php:35
 #: templates/shortcodes/dashboard-commissions.php:36
@@ -283,7 +283,7 @@ msgid "Filter"
 msgstr ""
 
 #: includes/admin-tables/class.yith-wcaf-commissions-table.php:471
-#: includes/admin-tables/class.yith-wcaf-payments-table.php:318
+#: includes/admin-tables/class.yith-wcaf-payments-table.php:324
 #: templates/admin/stat-panel-general.php:32
 #: templates/shortcodes/dashboard-clicks.php:37
 #: templates/shortcodes/dashboard-commissions.php:38
@@ -326,7 +326,7 @@ msgstr ""
 msgid "Switch to on hold"
 msgstr ""
 
-#: includes/admin-tables/class.yith-wcaf-payments-table.php:311
+#: includes/admin-tables/class.yith-wcaf-payments-table.php:317
 msgid "Select an affiliate"
 msgstr ""
 
@@ -401,6 +401,10 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+#: includes/class.yith-wcaf-admin.php:77
+msgid "Premium"
+msgstr ""
+
 #: includes/class.yith-wcaf-admin.php:106
 #: includes/class.yith-wcaf-admin.php:157
 msgid "YIT Plugins"
@@ -447,6 +451,14 @@ msgid_plural "Payments %s completed successfully"
 msgstr[0] ""
 msgstr[1] ""
 
+#: includes/class.yith-wcaf-admin.php:360
+msgid "Premium Version"
+msgstr ""
+
+#: includes/class.yith-wcaf-admin.php:378
+msgid "Plugin Documentation"
+msgstr ""
+
 #: includes/class.yith-wcaf-admin.php:393
 msgid "Global stats"
 msgstr ""
@@ -484,9 +496,13 @@ msgid "Please, enter a valid last name"
 msgstr ""
 
 #: includes/class.yith-wcaf-affiliate-handler.php:307
-#: includes/class.yith-wcaf-affiliate-handler.php:316
 #: templates/shortcodes/registration-form.php:39
 msgid "First name"
+msgstr ""
+
+#: includes/class.yith-wcaf-affiliate-handler.php:316
+#: templates/shortcodes/registration-form.php:48
+msgid "Last name"
 msgstr ""
 
 #: includes/class.yith-wcaf-affiliate-handler.php:325
@@ -552,7 +568,11 @@ msgstr ""
 msgid "Discounts"
 msgstr ""
 
-#: includes/class.yith-wcaf-commission-handler.php:1672
+#: includes/class.yith-wcaf-commission-handler.php:1643
+msgid "Payment registered; awaiting for IPN confirmation"
+msgstr ""
+
+#: includes/class.yith-wcaf-commission-handler.php:1706
 msgid "Referral Commissions"
 msgstr ""
 
@@ -752,15 +772,7 @@ msgid "General rate"
 msgstr ""
 
 #: plugin-options/settings-options.php:165
-msgid "General rate to apply to affiliates;"
-msgstr ""
-
-#: plugin-options/settings-options.php:165
-msgid "Rate Panel"
-msgstr ""
-
-#: plugin-options/settings-options.php:165
-msgid " can be used to specify rates per user/product"
+msgid "General rate to apply to affiliates"
 msgstr ""
 
 #: plugin-options/settings-options.php:177
@@ -809,6 +821,133 @@ msgstr ""
 
 #: templates/admin/affiliate-panel.php:35
 msgid "Create New"
+msgstr ""
+
+#: templates/admin/premium-tab.php:258 templates/admin/premium-tab.php:438
+#, php-format
+msgid "Upgrade to %1$spremium version%2$s of %1$sYITH WooCommerce Affiliates%2$s to benefit from all features!"
+msgstr ""
+
+#: templates/admin/premium-tab.php:261 templates/admin/premium-tab.php:441
+msgid "UPGRADE"
+msgstr ""
+
+#: templates/admin/premium-tab.php:262 templates/admin/premium-tab.php:442
+msgid "to the premium version"
+msgstr ""
+
+#: templates/admin/premium-tab.php:268
+msgid "Premium Features"
+msgstr ""
+
+#: templates/admin/premium-tab.php:271 templates/admin/premium-tab.php:276
+msgid "PayPal"
+msgstr ""
+
+#: templates/admin/premium-tab.php:279
+#, php-format
+msgid "All professionalism and advantages that PayPal puts at your disposal to offer you the best solution for %1$spayments%2$s of commissions owed to your affiliate users.%3$sPayPal is one of the most common payment methods in the market and a system able to offer you higher guarantees, you cannot do without it!"
+msgstr ""
+
+#: templates/admin/premium-tab.php:289 templates/admin/premium-tab.php:299
+msgid "Automatic payment"
+msgstr ""
+
+#: templates/admin/premium-tab.php:292
+msgid "It's time to automate payment system for commissions in your store: the more the traffic in your shop, the more the commissions to pay to your affiliates. You might not find always the time to do that and you might, then, risk to be late with payments and not respect deadlines. "
+msgstr ""
+
+#: templates/admin/premium-tab.php:295
+#, php-format
+msgid "Choose either to pay your affiliates each time a %1$snew commission%2$s is due to them, or to pay the balance on one %1$sspecific day%2$s of the month or to send the amount owed only when a specific commission amount %1$sthreshold%2$s is reached."
+msgstr ""
+
+#: templates/admin/premium-tab.php:306
+msgid "Click Info"
+msgstr ""
+
+#: templates/admin/premium-tab.php:311
+msgid "Click info"
+msgstr ""
+
+#: templates/admin/premium-tab.php:314
+#, php-format
+msgid "For any new visit coming from an %1$saffiliate%2$s link, the system stores related information, such as referrer name, visited page, date and possible order ID associated. In the latter case, it stores also conversion time, that is the time passed before a click converts into an order."
+msgstr ""
+
+#: templates/admin/premium-tab.php:324 templates/admin/premium-tab.php:331
+msgid "Commission rate"
+msgstr ""
+
+#: templates/admin/premium-tab.php:327
+#, php-format
+msgid "Set a basic commission rate for your entire shop, but do not limit to this only!%3$sEnter a different commission according to user or purchased product. In a quick and easy way, so, you will  be able to create a %1$scommission hierarchy%2$s according to your needs and your business methods."
+msgstr ""
+
+#: templates/admin/premium-tab.php:338 templates/admin/premium-tab.php:343
+msgid "Permanent association"
+msgstr ""
+
+#: templates/admin/premium-tab.php:346
+#, php-format
+msgid "A special way to encourage affiliates to take more and more customers to your site. After the first purchase from your affiliate link, all following orders will generate a %1$scommission%2$s earning for the associated affiliate."
+msgstr ""
+
+#: templates/admin/premium-tab.php:349
+msgid "This feature, that you can either enable or not, might be a powerful tool for drawing the attention of all those interested in an affiliation programme."
+msgstr ""
+
+#: templates/admin/premium-tab.php:359
+msgid "Affiliate history"
+msgstr ""
+
+#: templates/admin/premium-tab.php:362
+#, php-format
+msgid "As easy as useful for those like you who need to track all moves on your site.All orders linked to affiliates show an %1$s\"affiliation history\"%2$s, a comprehensive chronological list with all affiliates who have contributed to generate visits from that user in your site."
+msgstr ""
+
+#: templates/admin/premium-tab.php:366
+msgid "Mobile devices"
+msgstr ""
+
+#: templates/admin/premium-tab.php:373
+msgid "Automatic approval"
+msgstr ""
+
+#: templates/admin/premium-tab.php:378
+msgid "Automatic approval of new affiliates"
+msgstr ""
+
+#: templates/admin/premium-tab.php:381
+#, php-format
+msgid "If you do not want to waste your time approving all users who apply for becoming affilitates in your shop, do not worry, with the premium version you will just have enable an option and it's done: %1$sany new affiliate%2$s will be immediately ready to advertise your products!"
+msgstr ""
+
+#: templates/admin/premium-tab.php:391 templates/admin/premium-tab.php:398
+msgid "Click duration"
+msgstr ""
+
+#: templates/admin/premium-tab.php:394
+#, php-format
+msgid "You might need to make some %1$sstatistics%2$s about %1$sactivities%2$s connected to all affiliates in your site and probably also the number of visits generated by each of them. In order not to distort these data, you can set the number of seconds that have to pass before a visit form the same user can be counted as a new click in click logs."
+msgstr ""
+
+#: templates/admin/premium-tab.php:405 templates/admin/premium-tab.php:410
+msgid "Report"
+msgstr ""
+
+#: templates/admin/premium-tab.php:413
+#, php-format
+msgid "An entire section devoted to statistics about commissions and conversions generated for each visit. A global area with all data collected from general actions from users and another more detailed one, that allows you to read details of each single product and verify the number of %1$svisits%2$s generated, earnings coming from %1$saffiliation%2$s operations and conversion percentage."
+msgstr ""
+
+#: templates/admin/premium-tab.php:423 templates/admin/premium-tab.php:430
+msgid "Notification email"
+msgstr ""
+
+#: templates/admin/premium-tab.php:426
+#, php-format
+msgid "Enjoy the benefits of notification emails that the plugin allows you to get in order to keep both administratore and users (affiliate and not) always updated.%3$sAny new %1$saffiliation request%2$s or %1$scommission payment%2$s will be notified via email in a dynamic site like yours!"
 msgstr ""
 
 #: templates/admin/rate-panel.php:27
@@ -1018,7 +1157,7 @@ msgid "Referral URL"
 msgstr ""
 
 #: templates/shortcodes/link-generator.php:58
-msgid "( Now copy this referral link and share it anywhere )"
+msgid "(Now copy this referral link and share it anywhere)"
 msgstr ""
 
 #: templates/shortcodes/link-generator.php:61
@@ -1028,10 +1167,6 @@ msgstr ""
 #: templates/shortcodes/registration-form.php:30
 #: templates/shortcodes/registration-form.php:92
 msgid "Register"
-msgstr ""
-
-#: templates/shortcodes/registration-form.php:48
-msgid "Last name"
 msgstr ""
 
 #: templates/shortcodes/registration-form.php:57
